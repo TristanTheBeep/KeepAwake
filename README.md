@@ -6,7 +6,7 @@ It operates by preventing your system from sleeping by pressing the unused `F15`
 ## Getting Started
 
 1. **Right-click** `FirstRun.ps1` → **Run with PowerShell**
-2. Shortcut `LaunchKeepAwake.lnk` will be created automatically (I did it this way since I could not get Windows to update existing shortcuts with the custom Icon. That way when you pin the shortcut you can have a cute icon :D)
+2. Shortcut `LaunchKeepAwake.lnk` will be created automatically (I did it this way since I could not get Windows to update pre-existing shortcuts with a custom icon. Doing it this way allows you to pin the shortcut wherever you like with the cute icon :D)
 3. Use this shortcut going forward
 4. KeepAwake will autostart to the system tray. To access its features simply right click the tray icon.
 
