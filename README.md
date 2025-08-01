@@ -11,13 +11,13 @@ It operates by preventing your system from sleeping by pressing the unused `F15`
 4. KeepAwake will autostart to the system tray. To access its features simply right click the tray icon.
 
 ## Features
-- Presses `F15` every 1, 5, or 10 minutes
-- Runs silently in the **system tray**
-- **Pause** feature to temporarily stop inputs
+- Sends `F15` input every 1, 5, or 10 minutes
+- Will run silently in the **system tray**
+- Ability to **Pause** and temporarily stop inputs
 - Requires no install or admin access
 
-## Why Pause Exists
-Some programs (remote tools, games, keyboard utilities) may unexpectedly react to `F15`.  
+## Purpose for Pause?
+Some programs (remote terminals, games, keyboard utilities) may react to `F15`.  
 Use **Pause** if you experience issues while using your system
 
 ## Theme:  
