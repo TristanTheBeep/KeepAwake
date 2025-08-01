@@ -1,4 +1,4 @@
-# 🟧 KeepAwake Utility
+# 🟧 Tristan's KeepAwake Utility
 Tristan's KeepAwake Utility is a lightweight alternative to tools like Caffeine or Mouse Jiggler. It is designed to circumvent security restrictions that disallow .exe or unknown applications by running in PowerShell. 
 
 It operates by preventing your system from sleeping by pressing the unused `F15` key at regular intervals.
