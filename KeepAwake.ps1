@@ -88,7 +88,7 @@ $form.Controls.Add($label)
 
 # === Interval ComboBox ===
 $comboBox = New-Object Windows.Forms.ComboBox
-$comboBox.Items.AddRange(@("1 Minute", "5 Minutes", "10 Minutes"))
+$comboBox.Items.AddRange(@("1 Minute", "5 Minutes (Default)", "10 Minutes"))
 $comboBox.SelectedIndex = 1  # Default to 5 Minutes
 $comboBox.Top = 65
 $comboBox.Left = 85
@@ -99,7 +99,7 @@ $comboBox.ForeColor = $textColor
 $comboBox.Add_SelectedIndexChanged({
     switch ($comboBox.SelectedItem) {
         "1 Minute"    { Set-TimerInterval 60000 }
-        "5 Minutes"   { Set-TimerInterval 300000 }
+        "5 Minutes (Default)"  { Set-TimerInterval 300000 }
         "10 Minutes"  { Set-TimerInterval 600000 }
     }
 })
@@ -140,6 +140,20 @@ $notifyIcon.Icon = [System.Drawing.Icon]::ExtractAssociatedIcon($iconPath)
 $notifyIcon.Text = "KeepAwake"
 $notifyIcon.Visible = $true
 $notifyIcon.ContextMenuStrip = $contextMenu
+
+# === Version Label (Bottom Right) ===
+$versionLabel = New-Object Windows.Forms.Label
+$versionLabel.Text = "v1.01"
+$versionLabel.AutoSize = $true
+$versionLabel.ForeColor = $btnColor
+$versionLabel.Font = New-Object Drawing.Font("Segoe UI", 6)
+$versionLabel.BackColor = $bgColor
+$versionLabel.Top = $form.ClientSize.Height - 18
+$versionLabel.Left = $form.ClientSize.Width - 35
+$versionLabel.Anchor = "Bottom, Right"
+$form.Controls.Add($versionLabel)
+
+
 
 # === Run ===
 [System.Windows.Forms.Application]::Run()
