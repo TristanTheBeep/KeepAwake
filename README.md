@@ -20,6 +20,29 @@ It operates by preventing your system from sleeping by pressing the unused `F15`
 Some programs (remote terminals, games, keyboard utilities) may react to `F15`.  
 Use **Pause** if you experience issues while using your system
 
+## Common Issues
+ - Some users may see the below error:
+````markdown
+.\FirstRun.ps1: File C:\Users\User\Documents\KeepAwake\FirstRun.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ .\FirstRun.ps1
++ ~~~~~~~~~~~~~
++ CategoryInfo : SecurityError		: (:) [], PSSecurityException
++ FullyQualifiedErrorId 	: UnauthorizedAccess"
+````
+
+- In this case the firstrun script will not be able to properly run. First open powershell and run the below command: 
+"Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass"
+- After doing so, run FirstRun.ps1 from the same powershell window via .\
+- Once complete you should see the below output:
+````markdown
+PS C:\Users\User\Documents\KeepAwake> Set-Execution Policy -Scope Process -ExecutionPolicy Bypass
+PS C:\Users\User\Documents\KeepAwake> .\FirstRun.ps1
+Creating shortcut: C:\Users\User\Documents\KeepAwake\LaunchKeepAwake.lnk
+Shortcut created successfully.
+````
+After this you can use the LaunchKeepAwake shortcut going forward.
+
 ## Theme:  
 > Background: `#233D4D`  
 > Accent / Buttons: `#FE7F2D`
