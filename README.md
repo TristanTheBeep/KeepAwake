@@ -30,7 +30,7 @@ At line:1 char:1
 + CategoryInfo : SecurityError		: (:) [], PSSecurityException
 + FullyQualifiedErrorId 	: UnauthorizedAccess"
 ````
-(This is because some systems may go a step further and block script execution entirely due to the execution policy. Most cases you should hopefully be able to get around it via the below instructions)
+(This is because some systems may go a step further and block script execution entirely via execution policy. Most cases you should hopefully be able to get around it via the below instructions)
 
 - First open powershell and run the below command: 
 "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass"
