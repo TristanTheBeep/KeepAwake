@@ -1,5 +1,5 @@
 # 🟧 Tristan's KeepAwake Utility
-Tristan's KeepAwake Utility is a lightweight alternative to tools like Caffeine or Mouse Jiggler. It is designed to circumvent security restrictions that disallow .exe or unknown applications by running in PowerShell. 
+Tristan's KeepAwake Utility is a lightweight alternative to tools like Caffeine or Mouse Jiggler. It is designed to be usable when there are system security restrictions that disallow .exe or unknown applications by running in PowerShell. 
 
 It operates by preventing your system from sleeping by pressing the unused `F15` key at regular intervals.
 
@@ -30,8 +30,9 @@ At line:1 char:1
 + CategoryInfo : SecurityError		: (:) [], PSSecurityException
 + FullyQualifiedErrorId 	: UnauthorizedAccess"
 ````
+(This is because some systems may go a step further and block script execution entirely due to the execution policy. Most cases you should hopefully be able to get around it via the below instructions)
 
-- In this case the firstrun script will not be able to properly run. First open powershell and run the below command: 
+- First open powershell and run the below command: 
 "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass"
 - After doing so, run FirstRun.ps1 from the same powershell window via .\
 - Once complete you should see the below output:
