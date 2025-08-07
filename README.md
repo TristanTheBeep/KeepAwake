@@ -32,7 +32,7 @@ At line:1 char:1
 ````
 (This is because some systems may go a step further and block script execution entirely via execution policy. Most cases you should hopefully be able to get around it via the below instructions)
 
-- First open powershell and run the below command: 
+- First open powershell and run the following command: 
 "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass"
 - After doing so, run FirstRun.ps1 from the same powershell window via .\
 - Once complete you should see the below output:
